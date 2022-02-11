@@ -1,6 +1,6 @@
 plugins {
     kotlin("multiplatform")
-    kotlin("native.cocoapods")
+//     kotlin("native.cocoapods")
     id("kotlinx-serialization")
     id("com.android.library")
     id("com.squareup.sqldelight")
@@ -110,15 +110,15 @@ kotlin {
             languageSettings.optIn("kotlin.time.ExperimentalTime")
         }
 
-    cocoapods {
-        summary = "Common library for the KaMP starter kit"
-        homepage = "https://github.com/touchlab/KaMPKit"
-        framework {
-            isStatic = false // SwiftUI preview requires dynamic framework
-        }
-        ios.deploymentTarget = "12.4"
-        podfile = project.file("../ios/Podfile")
-    }
+//     cocoapods {
+//         summary = "Common library for the KaMP starter kit"
+//         homepage = "https://github.com/touchlab/KaMPKit"
+//         framework {
+//             isStatic = false // SwiftUI preview requires dynamic framework
+//         }
+//         ios.deploymentTarget = "12.4"
+//         podfile = project.file("../ios/Podfile")
+//     }
 }
 
 sqldelight {
